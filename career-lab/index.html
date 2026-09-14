@@ -3,41 +3,39 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Interactive career-readiness design test — Forage Marketing Pages prototype." />
-<title>Career Lab · Interactive Design Test</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900&display=swap" rel="stylesheet" />
+<meta name="description" content="Career readiness for brighter futures, a warm editorial design test for Forage." />
+<title>Career Lab · Brighter Futures</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../config/gembox-tokens.css" />
 <link rel="stylesheet" href="styles.css" />
 <script src="../shared/prototype-toolbar.js"></script>
 </head>
 <body>
 
-<!-- Scroll progress -->
 <div class="progress" id="progress" aria-hidden="true"></div>
 
 <!-- Announcement bar -->
 <div class="announce">
-  <div class="announce__marquee">
-    <span>◆ Free virtual job simulations, designed by the world's top employers</span>
-    <span>◆ 9M+ learners already building real-world skills</span>
-    <span>◆ Get noticed. Get hired.</span>
-    <span>◆ Free virtual job simulations, designed by the world's top employers</span>
-    <span>◆ 9M+ learners already building real-world skills</span>
-    <span>◆ Get noticed. Get hired.</span>
-  </div>
+  <p class="announce__text">
+    <span class="announce__spark" aria-hidden="true">✦</span>
+    New: free virtual job simulations designed by the world&rsquo;s top employers.
+    <a class="announce__link" href="#who">Explore now</a>
+  </p>
 </div>
 
 <!-- Nav -->
 <header class="nav" id="nav">
   <a class="nav__brand" href="#top">
-    <span class="nav__mark" aria-hidden="true">◆</span>
+    <span class="nav__mark" aria-hidden="true">✦</span>
     <span class="nav__name">forage</span>
   </a>
   <nav class="nav__links" aria-label="Primary">
     <a href="#who">Who we help</a>
     <a href="#impact">Impact</a>
-    <a href="#employers">Employers</a>
     <a href="#insights">Insights</a>
+    <a href="#news">News</a>
   </nav>
   <a class="btn btn--primary btn--sm nav__cta" href="#">Get started</a>
   <button class="nav__menu" aria-label="Open menu"><span></span><span></span><span></span></button>
@@ -45,97 +43,76 @@
 
 <main id="top">
 
-  <!-- Hero: mouse spotlight + parallax + kinetic type -->
+  <!-- Hero: big candid photo, chunky cream headline sitting at the bottom -->
   <section class="hero" id="hero">
-    <div class="hero__spot" id="spot" aria-hidden="true"></div>
-    <div class="hero__grid" aria-hidden="true"></div>
-    <div class="hero__blob hero__blob--1" data-depth="0.10" aria-hidden="true"></div>
-    <div class="hero__blob hero__blob--2" data-depth="0.18" aria-hidden="true"></div>
-
+    <img class="hero__photo" alt=""
+         src="https://picsum.photos/seed/forage-friends/1800/1400"
+         onerror="this.classList.add('is-broken')" />
+    <div class="hero__scrim" aria-hidden="true"></div>
     <div class="hero__inner">
-      <p class="hero__eyebrow reveal">Career readiness for everyone</p>
-      <h1 class="hero__title">
-        <span class="line"><span class="word">Get</span> <span class="word">Noticed.</span></span>
-        <span class="line line--accent"><span class="word">Get</span> <span class="word">Hired.</span></span>
-      </h1>
-      <p class="hero__lede reveal">Explore careers and prepare for the job with hundreds of free job
-        simulations — a real window into the work, before you ever apply.</p>
-      <div class="hero__cta reveal">
-        <a class="btn btn--primary btn--lg" href="#">Start a simulation <span aria-hidden="true">→</span></a>
-        <a class="btn btn--ghost btn--lg" href="#impact">See the impact</a>
+      <p class="hero__eyebrow">Career readiness for everyone</p>
+      <h1 class="hero__title">Guiding people toward<br />brighter futures</h1>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="mission" id="who">
+    <p class="mission__eyebrow reveal">How we make a difference</p>
+    <p class="mission__lede reveal">
+      We believe every learner deserves early, hands-on access to the world of work. So we
+      reimagined how people explore their interests, try on real careers, and build the skills
+      that top employers look for. Our job simulations are 100% free, open access, and
+      self-paced, a real window into the work before you ever apply.
+    </p>
+  </section>
+
+  <!-- Audience cards, editorial with photos -->
+  <section class="aud" aria-label="Who we help">
+    <article class="acard reveal">
+      <div class="acard__photo"><img alt="" src="https://picsum.photos/seed/forage-student/900/700" onerror="this.classList.add('is-broken')" /></div>
+      <div class="acard__body">
+        <h2 class="acard__title">Students</h2>
+        <p class="acard__desc">Explore careers, complete tasks that mirror real work, and get noticed by the companies you want to work for.</p>
+        <a class="acard__link" href="#">I&rsquo;m a student <span aria-hidden="true">›</span></a>
       </div>
-      <div class="hero__chips reveal" aria-hidden="true">
-        <span class="chip" data-depth="0.4">Investment Banking</span>
-        <span class="chip" data-depth="0.7">Cyber Security</span>
-        <span class="chip" data-depth="0.5">Project Management</span>
-        <span class="chip" data-depth="0.9">Robotics</span>
+    </article>
+
+    <article class="acard reveal">
+      <div class="acard__photo"><img alt="" src="https://picsum.photos/seed/forage-teacher/900/700" onerror="this.classList.add('is-broken')" /></div>
+      <div class="acard__body">
+        <h2 class="acard__title">Educators</h2>
+        <p class="acard__desc">Bring the workplace into the classroom with authentic, self-paced experiences that are easy to assign and track.</p>
+        <a class="acard__link" href="#">I&rsquo;m an educator <span aria-hidden="true">›</span></a>
       </div>
-    </div>
-    <div class="hero__scrollcue" aria-hidden="true"><span></span></div>
+    </article>
+
+    <article class="acard reveal">
+      <div class="acard__photo"><img alt="" src="https://picsum.photos/seed/forage-team/900/700" onerror="this.classList.add('is-broken')" /></div>
+      <div class="acard__body">
+        <h2 class="acard__title">Employers</h2>
+        <p class="acard__desc">Go beyond the resume and meet a diverse, job-ready pipeline of talent that has already done the work.</p>
+        <a class="acard__link" href="#">I&rsquo;m an employer <span aria-hidden="true">›</span></a>
+      </div>
+    </article>
+
+    <article class="acard reveal">
+      <div class="acard__photo"><img alt="" src="https://picsum.photos/seed/forage-partner/900/700" onerror="this.classList.add('is-broken')" /></div>
+      <div class="acard__body">
+        <h2 class="acard__title">Partners</h2>
+        <p class="acard__desc">Work with us to expand access and spark opportunity for young people, wherever they are starting from.</p>
+        <a class="acard__link" href="#">I&rsquo;m a partner <span aria-hidden="true">›</span></a>
+      </div>
+    </article>
   </section>
 
-  <!-- Intro -->
-  <section class="intro" id="who">
-    <p class="intro__eyebrow reveal">How we make a difference</p>
-    <p class="intro__lede reveal">We believe every learner deserves early, hands-on access to the world of
-      work. We're reimagining how people explore their interests, experiment with potential careers, and
-      build the <em>real-life skills</em> that top employers look for — 100% free, open access, self-paced.</p>
+  <!-- Quote -->
+  <section class="quote">
+    <span class="quote__mark" aria-hidden="true">&ldquo;</span>
+    <blockquote class="quote__text reveal">This program is like having binoculars. You get to peer across and see what a real role is like, piecing together everything you&rsquo;ve read about.</blockquote>
+    <p class="quote__cite reveal"><strong>Alex Doe</strong>, Forage simulation user</p>
   </section>
 
-  <!-- Interactive audience switcher -->
-  <section class="who2" aria-label="Who we help">
-    <div class="who2__tabs" role="tablist" aria-label="Choose your path">
-      <button class="who2__tab is-active" role="tab" aria-selected="true" data-panel="students">I'm a Student</button>
-      <button class="who2__tab" role="tab" aria-selected="false" data-panel="educators">I'm an Educator</button>
-      <button class="who2__tab" role="tab" aria-selected="false" data-panel="employers">I'm an Employer</button>
-      <button class="who2__tab" role="tab" aria-selected="false" data-panel="partners">I'm a Partner</button>
-      <span class="who2__ink" id="ink" aria-hidden="true"></span>
-    </div>
-
-    <div class="who2__stage">
-      <article class="who2__panel is-active" data-panel="students">
-        <div class="who2__copy">
-          <h2>Discover a career you can't yet see.</h2>
-          <p>Enroll in a job simulation, complete tasks that replicate real work, then compare your
-            answers to the pros. Earn a certificate and get on employers' radar.</p>
-          <a class="btn btn--primary" href="#">Explore simulations <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="who2__art who2__art--students" aria-hidden="true"><span>01</span></div>
-      </article>
-
-      <article class="who2__panel" data-panel="educators">
-        <div class="who2__copy">
-          <h2>Bring the workplace into the classroom.</h2>
-          <p>Give students authentic, self-paced experiences that map to real roles — with resources
-            that make career exploration easy to assign and easy to track.</p>
-          <a class="btn btn--primary" href="#">Resources for educators <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="who2__art who2__art--educators" aria-hidden="true"><span>02</span></div>
-      </article>
-
-      <article class="who2__panel" data-panel="employers">
-        <div class="who2__copy">
-          <h2>Go beyond the resume.</h2>
-          <p>Build a diverse, job-ready pipeline. Candidates prove their skills, grit, and drive on
-            real tasks — so you meet talent that's already done the work.</p>
-          <a class="btn btn--primary" href="#">Partner with us <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="who2__art who2__art--employers" aria-hidden="true"><span>03</span></div>
-      </article>
-
-      <article class="who2__panel" data-panel="partners">
-        <div class="who2__copy">
-          <h2>Scale opportunity together.</h2>
-          <p>We work with mission-driven organizations to expand access and spark innovation. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-          <a class="btn btn--primary" href="#">Become a partner <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="who2__art who2__art--partners" aria-hidden="true"><span>04</span></div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Impact / odometer stats -->
+  <!-- Impact, odometer counters on navy -->
   <section class="impact" id="impact">
     <p class="impact__eyebrow reveal">The proof</p>
     <div class="impact__grid">
@@ -156,70 +133,77 @@
         <p class="stat__label">Leading employers going beyond the resume</p>
       </div>
     </div>
-  </section>
-
-  <!-- Employer marquee -->
-  <section class="brands" id="employers">
-    <p class="brands__label reveal">Employers going beyond the resume</p>
-    <div class="brands__track">
-      <div class="brands__row" id="brandsRow">
-        <span>Northwind</span><span>Meridian</span><span>Vantage</span><span>Kestrel</span>
-        <span>Solaris</span><span>Brightwell</span><span>Copperline</span><span>Halcyon</span>
-        <span>Northwind</span><span>Meridian</span><span>Vantage</span><span>Kestrel</span>
-        <span>Solaris</span><span>Brightwell</span><span>Copperline</span><span>Halcyon</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonial -->
-  <section class="quote">
-    <blockquote class="quote__text reveal">"This program is like having binoculars — you get to peer
-      across and see what a real role is like, piecing together everything you've read about."</blockquote>
-    <p class="quote__cite reveal"><strong>Alex Doe</strong> · Forage Simulation User</p>
+    <a class="btn btn--cream" href="#">Learn more <span aria-hidden="true">›</span></a>
   </section>
 
   <!-- Insights -->
   <section class="insights" id="insights">
     <div class="insights__head">
-      <h2 class="section-title reveal">The&nbsp;Latest&nbsp;Insights</h2>
-      <a class="section-see reveal" href="#">See all <span aria-hidden="true">→</span></a>
+      <h2 class="section-title reveal">The latest insights</h2>
+      <a class="section-see reveal" href="#">See all <span aria-hidden="true">›</span></a>
     </div>
     <div class="insights__grid">
       <article class="post reveal">
-        <div class="post__thumb post__thumb--a"><span class="post__badge">Report</span></div>
+        <div class="post__photo"><img alt="" src="https://picsum.photos/seed/forage-ai/900/620" onerror="this.classList.add('is-broken')" /><span class="post__badge">Report</span></div>
         <p class="post__kicker">Career Readiness</p>
-        <h3 class="post__title">Teens and the AI Future: Perspectives and Preparation</h3>
+        <h3 class="post__title">Teens and the AI future: perspectives and preparation</h3>
       </article>
       <article class="post reveal">
-        <div class="post__thumb post__thumb--b"><span class="post__badge">Blog</span></div>
+        <div class="post__photo"><img alt="" src="https://picsum.photos/seed/forage-tech/900/620" onerror="this.classList.add('is-broken')" /><span class="post__badge">Blog</span></div>
         <p class="post__kicker">Career Readiness</p>
-        <h3 class="post__title">How Emerging Technology Shapes Career Readiness</h3>
+        <h3 class="post__title">How emerging technology shapes career readiness</h3>
       </article>
       <article class="post reveal">
-        <div class="post__thumb post__thumb--c"><span class="post__badge">Report</span></div>
+        <div class="post__photo"><img alt="" src="https://picsum.photos/seed/forage-curiosity/900/620" onerror="this.classList.add('is-broken')" /><span class="post__badge">Report</span></div>
         <p class="post__kicker">Career Readiness</p>
-        <h3 class="post__title">Curiosity into Career Direction: Looking Back, Moving Forward</h3>
+        <h3 class="post__title">Curiosity into career direction: looking back, moving forward</h3>
       </article>
     </div>
   </section>
 
-  <!-- CTA band -->
-  <section class="cta-band">
-    <div class="cta-band__inner reveal">
-      <h2 class="cta-band__title">A world where candidates are considered on their merits.</h2>
-      <p class="cta-band__sub">Your skills, grit, and drive — recognized and rewarded.</p>
-      <a class="btn btn--dark btn--lg" href="#">Enroll now <span aria-hidden="true">→</span></a>
+  <!-- News -->
+  <section class="news" id="news">
+    <div class="news__head">
+      <h2 class="section-title reveal">The latest news</h2>
+      <a class="section-see reveal" href="#">See all <span aria-hidden="true">›</span></a>
+    </div>
+    <ul class="news__list">
+      <li class="news__item reveal">
+        <span class="news__tag">Press Release</span>
+        <p class="news__headline">New research reveals a widening AI divide among learners</p>
+        <span class="news__date">Aug 26, 2026</span>
+      </li>
+      <li class="news__item reveal">
+        <span class="news__tag">Press</span>
+        <p class="news__headline">The jobs report tells a story about the future of work. Are we listening?</p>
+        <span class="news__date">Feb 16, 2026</span>
+      </li>
+      <li class="news__item reveal">
+        <span class="news__tag">Press</span>
+        <p class="news__headline">Employers embrace skills-first, experience-led hiring</p>
+        <span class="news__date">Jan 21, 2026</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta__inner reveal">
+      <span class="cta__spark" aria-hidden="true">✦</span>
+      <h2 class="cta__title">A world where candidates are considered on their merits.</h2>
+      <p class="cta__sub">Your skills, grit, and drive, recognized and rewarded.</p>
+      <a class="btn btn--dark btn--lg" href="#">Enroll now <span aria-hidden="true">›</span></a>
     </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="site-footer__brand"><span class="nav__mark" aria-hidden="true">◆</span><span class="nav__name">forage</span></div>
+  <div class="site-footer__brand"><span class="nav__mark" aria-hidden="true">✦</span><span class="nav__name">forage</span></div>
   <nav class="site-footer__links" aria-label="Footer">
     <a href="#">Contact</a><a href="#">Cookies</a><a href="#">Legal</a><a href="#">Financials</a>
   </nav>
-  <p class="site-footer__copy">©2026 Forage. Interactive design test — not a live page.</p>
+  <p class="site-footer__copy">&copy;2026 Forage. Warm editorial design test, not a live page.</p>
 </footer>
 
 <script src="script.js"></script>

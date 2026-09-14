@@ -1,4 +1,4 @@
-// Animated stat counters — count up when the impact section scrolls into view.
+// Animated stat counters that count up when the impact section scrolls into view.
 (function () {
   var nums = document.querySelectorAll('.stat__num');
   if (!nums.length) return;
