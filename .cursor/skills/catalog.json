@@ -1,0 +1,240 @@
+{
+  "generatedAt": "2026-06-04",
+  "skills": {
+    "accessibility": {
+      "slug": "accessibility",
+      "notionPageId": "36c50ba3919d816db006e02909156018",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d816db006e02909156018"
+    },
+    "action-cards": {
+      "slug": "action-cards",
+      "notionPageId": "36c50ba3919d81afa56bd2cc5c9eab5f",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81afa56bd2cc5c9eab5f"
+    },
+    "alert": {
+      "slug": "alert",
+      "notionPageId": "36c50ba3919d8110aed0e967bc6c243f",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d8110aed0e967bc6c243f"
+    },
+    "avatar": {
+      "slug": "avatar",
+      "notionPageId": "36c50ba3919d81d8ad55cec5eb767cb2",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81d8ad55cec5eb767cb2"
+    },
+    "backgrounds": {
+      "slug": "backgrounds",
+      "notionPageId": "36c50ba3919d812d945beba30783027a",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d812d945beba30783027a"
+    },
+    "badge": {
+      "slug": "badge",
+      "notionPageId": "36c50ba3919d8180855ae86def8a25dc",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d8180855ae86def8a25dc"
+    },
+    "banner": {
+      "slug": "banner",
+      "notionPageId": "36c50ba3919d81e1bb33cf17f648a124",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81e1bb33cf17f648a124"
+    },
+    "banner-ads": {
+      "slug": "banner-ads",
+      "notionPageId": "36c50ba3919d811e9a08cae599753518",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d811e9a08cae599753518"
+    },
+    "brand": {
+      "slug": "brand",
+      "notionPageId": "36c50ba3919d81d88b60dd02290b3e90",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81d88b60dd02290b3e90"
+    },
+    "breadcrumb": {
+      "slug": "breadcrumb",
+      "notionPageId": "36c50ba3919d81cfa3bcf224e9a15311",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81cfa3bcf224e9a15311"
+    },
+    "button": {
+      "slug": "button",
+      "notionPageId": "36c50ba3919d81659fc2d0b4bc67b675",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81659fc2d0b4bc67b675"
+    },
+    "card": {
+      "slug": "card",
+      "notionPageId": "36c50ba3919d81a7958be15ea860aec1",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81a7958be15ea860aec1"
+    },
+    "carousel": {
+      "slug": "carousel",
+      "notionPageId": "36c50ba3919d817f8618d6ae423014f2",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d817f8618d6ae423014f2"
+    },
+    "colors": {
+      "slug": "colors",
+      "notionPageId": "36c50ba3919d81039383f5baabf54ea5",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81039383f5baabf54ea5"
+    },
+    "design-principles": {
+      "slug": "design-principles",
+      "notionPageId": "36c50ba3919d810d82f0c33917464369",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d810d82f0c33917464369"
+    },
+    "design-system": {
+      "slug": "design-system",
+      "notionPageId": "36c50ba3919d8141ad5ded966d722d5c",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d8141ad5ded966d722d5c"
+    },
+    "dialog": {
+      "slug": "dialog",
+      "notionPageId": "36c50ba3919d812da8b0e53ce16765bd",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d812da8b0e53ce16765bd"
+    },
+    "divider": {
+      "slug": "divider",
+      "notionPageId": "36c50ba3919d81ceade9de30b7b6c607",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81ceade9de30b7b6c607"
+    },
+    "filters": {
+      "slug": "filters",
+      "notionPageId": "36c50ba3919d814b9503cad1365952f4",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d814b9503cad1365952f4"
+    },
+    "footer": {
+      "slug": "footer",
+      "notionPageId": "36c50ba3919d81019d8ad06f3bb7c657",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81019d8ad06f3bb7c657"
+    },
+    "illustrations": {
+      "slug": "illustrations",
+      "notionPageId": "36c50ba3919d819480f4db53f0080d0a",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d819480f4db53f0080d0a"
+    },
+    "indicator": {
+      "slug": "indicator",
+      "notionPageId": "36c50ba3919d8170b2c7e5e848732950",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d8170b2c7e5e848732950"
+    },
+    "input": {
+      "slug": "input",
+      "notionPageId": "36c50ba3919d81518890e8eb2da9400c",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81518890e8eb2da9400c"
+    },
+    "kebab": {
+      "slug": "kebab",
+      "notionPageId": "36c50ba3919d81b2ba3ecae12bf239e8",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81b2ba3ecae12bf239e8"
+    },
+    "layout": {
+      "slug": "layout",
+      "notionPageId": "36c50ba3919d818da5dbd958eb4201df",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d818da5dbd958eb4201df"
+    },
+    "loading-screens": {
+      "slug": "loading-screens",
+      "notionPageId": "36c50ba3919d817d8f02df39636a1fc2",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d817d8f02df39636a1fc2"
+    },
+    "logos-school-and-company": {
+      "slug": "logos-school-and-company",
+      "notionPageId": "36c50ba3919d8128af7ef6316e469375",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d8128af7ef6316e469375"
+    },
+    "menu": {
+      "slug": "menu",
+      "notionPageId": "36c50ba3919d8159aa74ea6f0882ae13",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d8159aa74ea6f0882ae13"
+    },
+    "metadata": {
+      "slug": "metadata",
+      "notionPageId": "36c50ba3919d81739c08d935bc48f30f",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81739c08d935bc48f30f"
+    },
+    "modal": {
+      "slug": "modal",
+      "notionPageId": "36c50ba3919d81ecbe2bd98f4da9cb61",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81ecbe2bd98f4da9cb61"
+    },
+    "navigation-bar": {
+      "slug": "navigation-bar",
+      "notionPageId": "36c50ba3919d81e1847cd728e10c6ff5",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81e1847cd728e10c6ff5"
+    },
+    "pagination": {
+      "slug": "pagination",
+      "notionPageId": "36c50ba3919d811dabf9f2cba193abd8",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d811dabf9f2cba193abd8"
+    },
+    "program-cards": {
+      "slug": "program-cards",
+      "notionPageId": "36c50ba3919d81ae9952e67d15323880",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81ae9952e67d15323880"
+    },
+    "progress": {
+      "slug": "progress",
+      "notionPageId": "36c50ba3919d81159e6ee227ee3485f6",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81159e6ee227ee3485f6"
+    },
+    "rating": {
+      "slug": "rating",
+      "notionPageId": "36c50ba3919d815f95a8ec74a8934533",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d815f95a8ec74a8934533"
+    },
+    "slat": {
+      "slug": "slat",
+      "notionPageId": "36c50ba3919d8175bc13fde550ff1ed8",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d8175bc13fde550ff1ed8"
+    },
+    "spoiler": {
+      "slug": "spoiler",
+      "notionPageId": "36c50ba3919d815cb0a3cedeeb988756",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d815cb0a3cedeeb988756"
+    },
+    "stepper": {
+      "slug": "stepper",
+      "notionPageId": "36c50ba3919d817591a7d393ef8748ec",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d817591a7d393ef8748ec"
+    },
+    "switches": {
+      "slug": "switches",
+      "notionPageId": "36c50ba3919d8111840dd041bbd4f6d3",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d8111840dd041bbd4f6d3"
+    },
+    "table": {
+      "slug": "table",
+      "notionPageId": "36c50ba3919d81b3b7acf409527284aa",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81b3b7acf409527284aa"
+    },
+    "tabs": {
+      "slug": "tabs",
+      "notionPageId": "36c50ba3919d81e7a2aee5197a230f8e",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81e7a2aee5197a230f8e"
+    },
+    "tile-button": {
+      "slug": "tile-button",
+      "notionPageId": "36c50ba3919d81478240c505dcdf1ef6",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81478240c505dcdf1ef6"
+    },
+    "toast": {
+      "slug": "toast",
+      "notionPageId": "36c50ba3919d81448234e8412bd5a265",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81448234e8412bd5a265"
+    },
+    "tooltip": {
+      "slug": "tooltip",
+      "notionPageId": "36c50ba3919d81eda7ccfecaa1c95ae2",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81eda7ccfecaa1c95ae2"
+    },
+    "typography": {
+      "slug": "typography",
+      "notionPageId": "36c50ba3919d81a3aba3eb95674220e7",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81a3aba3eb95674220e7"
+    },
+    "upload-download": {
+      "slug": "upload-download",
+      "notionPageId": "36c50ba3919d81f58c17d2eecfad3eb3",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81f58c17d2eecfad3eb3"
+    },
+    "voice-and-tone": {
+      "slug": "voice-and-tone",
+      "notionPageId": "36c50ba3919d81bcb3f4d279661feae7",
+      "notionUrl": "https://app.notion.com/p/36c50ba3919d81bcb3f4d279661feae7"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+---
+description: |
+  Browser checks (Playwright, headless Chromium, screenshots of a served page) are a
+  decision to raise with the human, not a reflex after every edit. Ask, then run.
+alwaysApply: true
+---
+
+# Browser checks are a question, not a reflex
+
+This is a static prototype repo. Most edits are small and legible, and spinning up a
+headless browser to confirm them costs the human time for very little.
+
+## The judgment call
+
+After an edit, ask yourself whether you actually doubt the result.
+
+If you don't, just say what changed and why it holds up. Don't launch anything.
+
+If you do — the layout could collapse, a selector might not match, the interaction is
+hard to reason about statically, or you're chasing a bug you can't see in the source —
+then say what specifically you're unsure of and ask whether it's worth checking in a
+browser. The human knows better than you whether that particular doubt matters right now.
+
+Uncertainty is worth surfacing either way. Voicing a doubt and being told to skip it is
+a good outcome; silently burning a minute on Playwright to resolve a doubt you never
+mentioned is not.
+
+## No need to ask
+
+- The human asked for a screenshot, a measurement, or a debugging session.
+- A Figma capture is underway (see `gembox-figma-maker`) — headless Playwright is part
+  of that flow.
+
+## Applies to
+
+Playwright and Puppeteer, throwaway verification scripts in `/tmp` or the repo, local
+servers started only to check your own work, and screenshots taken as a routine
+post-edit step.

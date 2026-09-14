@@ -1,0 +1,56 @@
+/* Starter marketing page. Tokens come from ../config/gembox-tokens.css.
+   Build UI with Gembox components only (see .claude/skills/gembox-*). */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--gb-font-family-sans, 'DM Sans', system-ui, sans-serif);
+  color: var(--gb-ui-text);
+  background: var(--gb-ui-white);
+}
+
+.page {
+  max-width: 1057px;
+  margin: 0 auto;
+  padding: 96px 24px;
+}
+
+.hero {
+  max-width: 42rem;
+}
+
+.hero__title {
+  margin: 0 0 16px;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.hero__lede {
+  margin: 0 0 32px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--gb-ui-subtle);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: var(--gb-radius-md, 8px);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn--primary {
+  color: var(--gb-ui-white);
+  background: var(--gb-ui-action-primary);
+}
+
+.btn--primary:hover {
+  background: var(--gb-ui-action-emphasis);
+}

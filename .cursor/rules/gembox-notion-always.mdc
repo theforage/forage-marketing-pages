@@ -1,0 +1,32 @@
+---
+description: Gembox golden rule — only build UI that exists in the design system. No exceptions.
+alwaysApply: true
+---
+
+# Gembox (always on)
+
+Before you **create, overwrite, or delete** UI files (HTML, CSS, JS, JSX, Vue, Svelte, prototype assets, or Tailwind / config that affects visible UI):
+
+## Golden rule (zero exceptions)
+
+**Never** implement visible UI that is **not** in the Gembox design system. **No** substitutes—not for prototypes, not because the spec asks, not for "unblocking" the human.
+
+1. Read **the entire** `.cursor/skills/gembox-design-system/SKILL.md`. If missing, **STOP** — human runs **Gembox start** per https://www.notion.so/34150ba3919d804bac88fed97249ed3a §3.
+2. Load **`.cursor/skills/gembox-<slug>/SKILL.md`** for **every** surface you build (see `catalog.json`). **No skill / no Gembox main component → STOP** and report what is missing. **Do not invent.**
+3. **Figma structure pass:** `get_metadata` on the **exact variant** + nested **`INSTANCE`** nodes; `get_design_context` on the variant **and** each icon/affordance instance you ship. Load **`gembox-icons`** when UI includes icons. Load **`gembox-typography`** whenever you ship or touch any text style (headings, body, labels, captions, buttons) — verify font family, size, weight, line-height, letter-spacing, and color against the matching Figma node/text style, not just an existing local CSS class. Ship assets/styles from those passes only.
+4. **Pre-write gate:** Before editing UI files, post a **Figma receipt** (variant node id, key type/color/spacing numbers from MCP, including the text-style values from step 3 for any typography touched). **Gembox Components** (`IgohaddARKIJHihXX0OE4Z`) wins for control tokens; product mockups are layout/copy only. **No receipt → no UI edits.**
+
+If the task requests UI outside the system: **STOP**. Do not ship a generic alternative.
+
+**Do not** load **Repo** or **Figma maker** skills during normal UI work—only on bootstrap or HTML → Figma capture.
+
+## Non-negotiable URL
+
+- Gembox Cursor Integration: https://www.notion.so/34150ba3919d804bac88fed97249ed3a
+
+## Do not
+
+- Invent UI because you "know" what the human wants.
+- Skip local skills or Figma MCP and implement from memory.
+- Treat "prototype" as permission to use non-Gembox controls.
+- Re-fetch Notion on every UI edit after Gembox start.

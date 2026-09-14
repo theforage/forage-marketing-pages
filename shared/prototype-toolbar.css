@@ -1,0 +1,193 @@
+/* Repo chrome for every prototype — not product UI. */
+
+:root {
+  --prototype-toolbar-height: 40px;
+}
+
+#prototype-internal-strip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10001;
+  box-sizing: border-box;
+  min-height: var(--prototype-toolbar-height);
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  font: 600 13px / 1.35 var(--gb-font-family-sans, var(--font-family, "DM Sans", system-ui, sans-serif));
+  background: var(--gb-ui-brand, var(--ui-brand-navy, #1c6ac3));
+  color: var(--gb-ui-white, var(--ui-white, #fff));
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--gb-ui-text, #3f3f3f) 14%, transparent);
+}
+
+.prototype-toolbar-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-width: 0;
+}
+
+.prototype-toolbar-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: inherit;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.prototype-toolbar-home:hover {
+  background: color-mix(in srgb, var(--gb-ui-white, #fff) 18%, transparent);
+}
+
+.prototype-toolbar-home:focus-visible {
+  outline: 2px solid var(--gb-ui-white, #fff);
+  outline-offset: 2px;
+}
+
+.prototype-toolbar-home svg {
+  display: block;
+}
+
+.prototype-toolbar-versions {
+  position: relative;
+  display: inline-flex;
+}
+
+.prototype-toolbar-version-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 4px 8px;
+  border: 1px solid color-mix(in srgb, var(--gb-ui-white, #fff) 40%, transparent);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--gb-ui-white, #fff) 12%, transparent);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.prototype-toolbar-version-trigger:hover {
+  background: color-mix(in srgb, var(--gb-ui-white, #fff) 24%, transparent);
+}
+
+.prototype-toolbar-version-trigger:focus-visible {
+  outline: 2px solid var(--gb-ui-white, #fff);
+  outline-offset: 2px;
+}
+
+.prototype-toolbar-version-trigger svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+.prototype-toolbar-version-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 1;
+  min-width: 180px;
+  padding: 4px;
+  border-radius: 8px;
+  background: var(--gb-ui-white, #fff);
+  box-shadow: 0 6px 20px rgb(0 0 0 / 22%);
+}
+
+.prototype-toolbar-version-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  color: var(--gb-ui-text, #3f3f3f);
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.prototype-toolbar-version-item:hover {
+  background: color-mix(in srgb, var(--gb-ui-brand, #1c6ac3) 10%, transparent);
+}
+
+.prototype-toolbar-version-item:focus-visible {
+  outline: 2px solid var(--gb-ui-brand, #1c6ac3);
+  outline-offset: -2px;
+}
+
+.prototype-toolbar-version-item[aria-current="true"] {
+  color: var(--gb-ui-brand, #1c6ac3);
+  font-weight: 600;
+}
+
+.prototype-toolbar-version-check {
+  display: inline-flex;
+  justify-content: center;
+  width: 12px;
+  flex-shrink: 0;
+}
+
+/* Demo-only autofill controls — presenter shortcuts, not product UI. */
+.prototype-toolbar-autofill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 4px;
+  padding-left: 8px;
+  border-left: 1px solid color-mix(in srgb, var(--gb-ui-white, #fff) 30%, transparent);
+}
+
+.prototype-toolbar-autofill-btn {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 4px 9px;
+  border: 1px solid color-mix(in srgb, var(--gb-ui-white, #fff) 40%, transparent);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--gb-ui-white, #fff) 12%, transparent);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.prototype-toolbar-autofill-btn:hover {
+  background: color-mix(in srgb, var(--gb-ui-white, #fff) 24%, transparent);
+}
+
+.prototype-toolbar-autofill-btn:focus-visible {
+  outline: 2px solid var(--gb-ui-white, #fff);
+  outline-offset: 2px;
+}
+
+.prototype-toolbar-label {
+  margin-left: auto;
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+body.prototype-has-strip {
+  padding-top: var(--prototype-toolbar-height);
+}
+
+body.prototype-has-strip .app,
+body.prototype-has-strip #root,
+body.prototype-has-strip .quiz-page {
+  min-height: calc(100vh - var(--prototype-toolbar-height));
+}
+
+html.prototype-figma-capture #prototype-internal-strip {
+  display: none !important;
+}
+
+html.prototype-figma-capture body.prototype-has-strip {
+  padding-top: 0 !important;
+}

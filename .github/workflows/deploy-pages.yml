@@ -1,0 +1,52 @@
+name: Deploy static marketing pages to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Assemble site (landing page + marketing pages)
+        run: |
+          mkdir -p _site
+          cp index.html landing.css _site/
+          cp -r config _site/config
+          cp -r shared _site/shared
+          cp -r assets _site/assets
+          cp -r starter-page _site/starter-page
+          # Disable Jekyll on Pages so README.md is never turned into the homepage.
+          touch _site/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+          # Required so .nojekyll is not stripped by the archiver (exclude=.[^/]*).
+          include-hidden-files: true
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+      actions: read
+      contents: read
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

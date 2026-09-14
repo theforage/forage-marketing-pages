@@ -1,0 +1,39 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Merge/patch backup files
+*.orig
+
+# Maintainer / agent scratch (not part of the prototype)
+scripts/
+gembox-skills-draft/
+.tmp/
+.tmp-*/
+.tmp-notion-mcp-args/
+docs/notion-drafts/
+
+# Legacy Figma-capture frames (not used by the app)
+video-frames/
+
+# HIP Designer / EAB Demo Builder — not part of this project (both uninstalled).
+# Kept as a safety net: if either is ever reinstalled it re-injects these paths
+# into whatever workspace is open.
+.cursor/rules/hip.mdc
+.cursor/hip/
+.cursor/commands/hip-designer-*.md
+.github/instructions/hip-*.instructions.md
+.cursor/eab-demo-builder/
+.cursor/skills/demo-build/
+.cursor/commands/demo-*.md
+
+# Node dependencies (reinstall with npm/pnpm install)
+node_modules/
+
+# Local app runner state
+.cursor/skills/.runtime/
+!.cursor/skills/run-app/scripts/
+!.cursor/skills/run-app/scripts/start.sh
+!.cursor/skills/run-app/scripts/status.sh
+!.cursor/skills/stop-app/scripts/
+!.cursor/skills/stop-app/scripts/stop.sh

@@ -1,0 +1,99 @@
+{
+  "apps": [
+    {
+      "id": "all",
+      "name": "All Prototypes (landing + every demo)",
+      "aliases": [
+        "all",
+        "all prototypes",
+        "landing",
+        "landing page",
+        "index",
+        "home",
+        "root",
+        "everything"
+      ],
+      "dir": ".",
+      "command": "npx --yes serve .",
+      "portHint": 3000,
+      "notes": "Serves the repo root so the landing page, every prototype, and the shared toolbar in shared/ all work. Prefer this when you want the home/back button. Zero-dependency alternative: ./serve.sh"
+    },
+    {
+      "id": "sim-builder-latest-in-progress",
+      "name": "Sim Builder Latest In Progress",
+      "aliases": [
+        "sim builder latest in progress",
+        "sim builder latest",
+        "sim builder",
+        "sim builder drag and drop",
+        "sim builder dnd",
+        "drag and drop",
+        "sim-builder-latest-in-progress",
+        "sim-builder-drag-and-drop"
+      ],
+      "dir": "sim-builder-latest-in-progress",
+      "command": "npx --yes serve .",
+      "portHint": 3000,
+      "notes": "Also works via file:// — double-click sim-builder-latest-in-progress/index.html. Serve is optional (e.g. for Figma capture)."
+    },
+    {
+      "id": "clyde-co-eligibility-quiz",
+      "name": "Clyde & Co Eligibility Quiz",
+      "aliases": [
+        "clyde",
+        "clyde quiz",
+        "clyde co",
+        "eligibility quiz",
+        "quiz"
+      ],
+      "dir": "clyde-co-eligibility-quiz",
+      "command": "npx --yes serve .",
+      "portHint": 3000,
+      "notes": "Needs HTTP because the prototype uses ES modules; do not open with file://."
+    },
+    {
+      "id": "student-signup",
+      "name": "Student sign-up",
+      "aliases": [
+        "student signup",
+        "student sign-up",
+        "signup",
+        "sign up",
+        "high school signup",
+        "student-signup"
+      ],
+      "dir": "student-signup",
+      "command": "npx --yes serve .",
+      "portHint": 3000,
+      "notes": "Works via file:// — double-click student-signup/index.html. Serve is optional."
+    },
+    {
+      "id": "ai-simulations",
+      "name": "AI Task types",
+      "aliases": [
+        "ai simulations",
+        "ai task types",
+        "making ai simulations",
+        "text input",
+        "ai feedback",
+        "simulation player",
+        "player",
+        "green-trail",
+        "audio",
+        "video",
+        "file upload",
+        "redlining",
+        "ai chat",
+        "video chat",
+        "chat interface",
+        "ai email",
+        "ai-simulations",
+        "ai-feedback"
+      ],
+      "dir": "ai-simulations",
+      "command": "npx --yes serve .",
+      "portHint": 3000,
+      "notes": "Versions: text-input/ (formerly the ai-feedback prototype), audio/, video/, file-upload/, email-redlining/, email-compose/, inline-redlining/, chat-recording/, video-chat/, video-call/, and chat-thread-feedback/ (canonical chat). ai-simulations/index.html redirects to text-input/; switch versions from the toolbar dropdown. Needs HTTP for the switcher to resolve ../../shared/."
+    }
+  ]
+}

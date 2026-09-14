@@ -1,0 +1,353 @@
+/**
+ * Gembox design tokens — CSS custom properties mirroring Gembox variable paths
+ * (slashes → hyphens; prefix --gb-).
+ *
+ * **Source of truth:** Gembox Components in Figma
+ * (`https://www.figma.com/design/IgohaddARKIJHihXX0OE4Z/Gembox-Components`):
+ * export color and float variables (spacing, radii, etc.) from published variables.
+ *
+ * **Rules:** `Core/*` = hex literals only. `UI/*`, `Semantic/*`, `Shortcuts/*`, `Brand/*`
+ * reference `var(--gb-core-…)` (plus the one orphan below).
+ *
+ * **Orphan:** Gembox `UI/Disabled` resolves to `#a1a1a1`, which does not match any
+ * `Core/Gray/*` step in this collection — `UI/Disabled` / `Semantic UI/Disabled` keep
+ * that resolved literal rather than mapping to an invented Core step.
+ *
+ * Effect scrim/shadow: no overlay color variable in export — `color-mix` on
+ * `Core/Gray/900` only.
+ *
+ * **Icons:** use SVG exported from the org Gembox-linked icon libraries in Figma
+ * (Regular `8rLLCo18XFH9m14wEkNp3j`, Duotone `3Ji4LpXd1ZEmsagfmA9ZfE`, Solid
+ * `QoKmbST72iKOWlZ3undMaX`). Prefer those over generic stock icon CDNs or packs.
+ */
+
+:root {
+  /* ══ Core / Navy ══ */
+  --gb-core-navy-000: #f6fafe;
+  --gb-core-navy-100: #c9def8;
+  --gb-core-navy-200: #76adeb;
+  --gb-core-navy-300: #4d94e5;
+  --gb-core-navy-400: #1c6ac3;
+  --gb-core-navy-500: #144c8b;
+  --gb-core-navy-600: #114178;
+  --gb-core-navy-700: #0f3867;
+  --gb-core-navy-800: #0c2e55;
+  --gb-core-navy-900: #0a2443;
+
+  /* ══ Core / Jade ══ */
+  --gb-core-jade-000: #f6fdfc;
+  --gb-core-jade-100: #e0fbf3;
+  --gb-core-jade-200: #baf0e0;
+  --gb-core-jade-300: #8fe1c3;
+  --gb-core-jade-400: #38c98c;
+  --gb-core-jade-500: #14a772;
+  --gb-core-jade-600: #058557;
+  --gb-core-jade-700: #00775b;
+  --gb-core-jade-800: #00574d;
+  --gb-core-jade-900: #003e36;
+
+  /* ══ Core / Gray ══ */
+  --gb-core-gray-000: #fbfbfb;
+  --gb-core-gray-100: #f7f7f7;
+  --gb-core-gray-200: #efefef;
+  --gb-core-gray-300: #e4e4e4;
+  --gb-core-gray-400: #d7d7d7;
+  --gb-core-gray-500: #bdbdbd;
+  --gb-core-gray-600: #949494;
+  --gb-core-gray-700: #737373;
+  --gb-core-gray-800: #5f5e5e;
+  --gb-core-gray-900: #3f3f3f;
+
+  /* ══ Core / Green ══ */
+  --gb-core-green-000: #fbfefb;
+  --gb-core-green-100: #dbfadf;
+  --gb-core-green-200: #b2f2bb;
+  --gb-core-green-300: #8ce99a;
+  --gb-core-green-400: #69db7c;
+  --gb-core-green-500: #51cf66;
+  --gb-core-green-600: #40c057;
+  --gb-core-green-700: #37b24d;
+  --gb-core-green-800: #0a7f21;
+  --gb-core-green-900: #097129;
+
+  /* ══ Core / Yellow ══ */
+  --gb-core-yellow-000: #fffdf5;
+  --gb-core-yellow-100: #fff3bf;
+  --gb-core-yellow-200: #ffec99;
+  --gb-core-yellow-300: #ffe066;
+  --gb-core-yellow-400: #ffd43b;
+  --gb-core-yellow-500: #fcc51c;
+  --gb-core-yellow-600: #fab005;
+  --gb-core-yellow-700: #e59500;
+  --gb-core-yellow-800: #be5700;
+  --gb-core-yellow-900: #803a00;
+
+  /* ══ Core / Red ══ */
+  --gb-core-red-000: #fff5f5;
+  --gb-core-red-100: #ffcdcd;
+  --gb-core-red-200: #ffb5b5;
+  --gb-core-red-300: #ff9c9c;
+  --gb-core-red-400: #ff8484;
+  --gb-core-red-500: #ff6b6b;
+  --gb-core-red-600: #ff4444;
+  --gb-core-red-700: #ff1c1c;
+  --gb-core-red-800: #cc0000;
+  --gb-core-red-900: #990000;
+
+  /* ══ Core / Teal ══ */
+  --gb-core-teal-000: #f5fdff;
+  --gb-core-teal-100: #e4f9ff;
+  --gb-core-teal-200: #cbf2fe;
+  --gb-core-teal-300: #aae1f2;
+  --gb-core-teal-400: #58b6d3;
+  --gb-core-teal-500: #2194b7;
+  --gb-core-teal-600: #007195;
+  --gb-core-teal-700: #005b78;
+  --gb-core-teal-800: #00475e;
+  --gb-core-teal-900: #00384a;
+
+  /* ══ Core / Violet ══ */
+  --gb-core-violet-000: #f7f5ff;
+  --gb-core-violet-100: #e5dbff;
+  --gb-core-violet-200: #d0bfff;
+  --gb-core-violet-300: #b197fc;
+  --gb-core-violet-400: #9775fa;
+  --gb-core-violet-500: #845ef7;
+  --gb-core-violet-600: #7950f2;
+  --gb-core-violet-700: #7048e8;
+  --gb-core-violet-800: #6741d9;
+  --gb-core-violet-900: #5f3dc4;
+
+  /* ══ Core / Lime ══ */
+  --gb-core-lime-bg: #fbfff0;
+  --gb-core-lime-100: #f5fee2;
+  --gb-core-lime-200: #ebfdc5;
+  --gb-core-lime-300: #e1fba9;
+  --gb-core-lime-400: #d7fa8c;
+  --gb-core-lime-500: #cdf96f;
+  --gb-core-lime-600: #b3ff11;
+  --gb-core-lime-700: #a2ee00;
+  --gb-core-lime-800: #6b9d00;
+  --gb-core-lime-900: #385300;
+
+  /* ══ Core / White & Black ══ */
+  --gb-core-white: #ffffff;
+  --gb-core-black: #000000;
+
+  /* ══ UI — surface & chrome ══ */
+  --gb-ui-text: var(--gb-core-gray-900);
+  --gb-ui-subtle: var(--gb-core-gray-700);
+  --gb-ui-disabled: #a1a1a1;
+  --gb-ui-border: var(--gb-core-gray-300);
+  --gb-ui-hover: var(--gb-core-gray-100);
+  --gb-ui-background: var(--gb-core-gray-000);
+  --gb-ui-white: var(--gb-core-white);
+  --gb-ui-brand: var(--gb-core-navy-500);
+
+  /* ══ UI — action (Navy family) ══ */
+  --gb-ui-action-background: var(--gb-core-navy-000);
+  --gb-ui-action-support: var(--gb-core-navy-200);
+  --gb-ui-action-primary: var(--gb-core-navy-400);
+  --gb-ui-action-emphasis: var(--gb-core-navy-500);
+
+  /* ══ UI — danger ══ */
+  --gb-ui-danger-background: var(--gb-core-red-000);
+  --gb-ui-danger-support: var(--gb-core-red-700);
+  --gb-ui-danger-primary: var(--gb-core-red-800);
+  --gb-ui-danger-emphasis: var(--gb-core-red-900);
+
+  /* ══ UI — warn ══ */
+  --gb-ui-warn-background: var(--gb-core-yellow-000);
+  --gb-ui-warn-support: var(--gb-core-yellow-700);
+  --gb-ui-warn-primary: var(--gb-core-yellow-800);
+  --gb-ui-warn-emphasis: var(--gb-core-yellow-900);
+
+  /* ══ UI — success ══ */
+  --gb-ui-success-background: var(--gb-core-green-000);
+  --gb-ui-success-support: var(--gb-core-green-700);
+  --gb-ui-success-primary: var(--gb-core-green-800);
+  --gb-ui-success-emphasis: var(--gb-core-green-900);
+
+  /* ══ UI — info ══ */
+  --gb-ui-info-background: var(--gb-core-teal-000);
+  --gb-ui-info-support: var(--gb-core-teal-300);
+  --gb-ui-info-primary: var(--gb-core-teal-600);
+  --gb-ui-info-emphasis: var(--gb-core-teal-700);
+
+  /* ══ UI — accent ══ */
+  --gb-ui-accent-background: var(--gb-core-violet-000);
+  --gb-ui-accent-support: var(--gb-core-violet-400);
+  --gb-ui-accent-primary: var(--gb-core-violet-600);
+  --gb-ui-accent-emphasis: var(--gb-core-violet-900);
+
+  /* ══ UI — jade & lime ══ */
+  --gb-ui-jade-background: var(--gb-core-jade-000);
+  --gb-ui-jade-support: var(--gb-core-jade-400);
+  --gb-ui-jade-primary: var(--gb-core-jade-600);
+  --gb-ui-jade-emphasis: var(--gb-core-jade-800);
+  --gb-ui-lime-background: var(--gb-core-lime-bg);
+  --gb-ui-lime-support: var(--gb-core-lime-700);
+  --gb-ui-lime-primary: var(--gb-core-lime-800);
+  --gb-ui-lime-emphasis: var(--gb-core-lime-900);
+
+  /* ══ UI / Gray (Gembox UI Colors/Gray/200, UI/Gray/bg) ══ */
+  --gb-ui-colors-gray-200: var(--gb-core-gray-200);
+  --gb-ui-gray-bg: var(--gb-core-gray-000);
+
+  /* ══ UI / Yellow (maps to Core/Yellow/700 in Gembox) ══ */
+  --gb-ui-yellow-700: var(--gb-core-yellow-700);
+
+  /* ══ Semantic UI ══ */
+  --gb-semantic-ui-action-background: var(--gb-core-navy-000);
+  --gb-semantic-ui-action-primary: var(--gb-core-navy-400);
+  --gb-semantic-ui-text: var(--gb-core-gray-900);
+  --gb-semantic-ui-disabled: var(--gb-ui-disabled);
+  --gb-semantic-ui-subtle: var(--gb-core-gray-700);
+
+  /* ══ Semantic / Action ══ */
+  --gb-semantic-action-200: var(--gb-core-navy-200);
+  --gb-semantic-action-300: var(--gb-core-navy-300);
+
+  /* ══ Semantic / Warning ══ */
+  --gb-semantic-warning-warning: var(--gb-core-yellow-500);
+  --gb-semantic-warning-warning-light: var(--gb-core-yellow-200);
+
+  /* ══ Semantic / Lime ══ */
+  --gb-semantic-lime-800: var(--gb-core-lime-800);
+
+  /* ══ Shortcuts ══ */
+  --gb-shortcuts-white: var(--gb-core-white);
+  --gb-shortcuts-black: var(--gb-core-black);
+  --gb-shortcuts-hover: var(--gb-core-gray-100);
+  --gb-shortcuts-border: var(--gb-core-gray-300);
+  --gb-shortcuts-text: var(--gb-core-gray-900);
+  --gb-shortcuts-action: var(--gb-core-navy-400);
+  --gb-shortcuts-brand: var(--gb-core-navy-500);
+
+  /* ══ Brand / Navy ══ */
+  --gb-brand-navy-primary: var(--gb-core-navy-600);
+
+  /* ══ Forage Brand / Jade (maps to Core/Jade/400) ══ */
+  --gb-forage-brand-jade-jade-400: var(--gb-core-jade-400);
+  --gb-forage-brand-jade-jade-500: var(--gb-core-jade-500);
+
+  /* ══ Interactive ══ */
+  --gb-interactive-primary-hover: var(--gb-ui-action-emphasis);
+
+  /* ══ Scrollbar ══ */
+  --gb-scrollbar-thumb: var(--gb-core-gray-300);
+
+  /* ══ Modal / elevation ══ */
+  --gb-overlay-scrim: color-mix(in srgb, var(--gb-core-gray-900) 35%, transparent);
+  --gb-elevation-shadow: color-mix(in srgb, var(--gb-core-gray-900) 18%, transparent);
+
+  /* ══ Gembox FLOAT: Spacing/* (px) ══ */
+  --gb-spacing-4xs: 4px;
+  --gb-spacing-2xs: 8px;
+  --gb-spacing-xs: 10px;
+  --gb-spacing-sm: 12px;
+  --gb-spacing-md: 16px;
+  --gb-spacing-lg: 20px;
+  --gb-spacing-xl: 24px;
+  --gb-spacing-2xl: 32px;
+  --gb-spacing-3xl: 48px;
+  --gb-spacing-4xl: 64px;
+
+  /* ══ Sim Builder shell (layout — not Gembox FLOAT) ══ */
+  --gb-layout-titlebar-height: 33px;
+  --gb-layout-wordmark-max-width: 107px;
+  --gb-layout-sidebar-width: 260px;
+  --gb-layout-sidebar-narrow-width: 64px;
+  --gb-layout-split-max-width: 1280px;
+  --gb-layout-content-max-width: 1020px;
+  --gb-layout-form-width: 640px;
+  --gb-layout-slat-shell-max-width: 672px;
+  --gb-layout-tasks-nav-width: 220px;
+  --gb-layout-tasks-workspace-width: 807px;
+  --gb-layout-tasks-form-split-width: 423px;
+  --gb-layout-tasks-preview-mobile-width: 320px;
+  --gb-layout-tasks-preview-width: 321px;
+  --gb-layout-task-rail-width: var(--gb-layout-form-width);
+
+  /* ══ Gembox FLOAT: Corner Radius/* ══ */
+  --gb-radius-xs: 2px;
+  --gb-radius-sm: 4px;
+  --gb-radius-md: 6px;
+  --gb-radius-lg: 8px;
+  --gb-radius-xl: 16px;
+  --gb-radius-2xl: 32px;
+
+  /* ══ Typography ══ */
+  --gb-font-family-sans: "DM Sans", system-ui, sans-serif;
+
+  --gb-styles-heading-4-font-family: var(--gb-font-family-sans);
+  --gb-styles-heading-4-font-size: 34px;
+  --gb-styles-heading-4-font-weight: 500;
+  --gb-styles-heading-4-line-height: 1.25;
+  --gb-styles-heading-4-letter-spacing: 0;
+
+  /* Title 2 / Title 3 — Figma Typography 11443:100244 / 11443:100251 */
+  --gb-styles-title-2-font-family: var(--gb-font-family-sans);
+  --gb-styles-title-2-font-size: 26px;
+  --gb-styles-title-2-font-weight: 500;
+  --gb-styles-title-2-line-height: 33px;
+  --gb-styles-title-2-letter-spacing: 0;
+
+  --gb-styles-title-3-font-family: var(--gb-font-family-sans);
+  --gb-styles-title-3-font-size: 22px;
+  --gb-styles-title-3-font-weight: 500;
+  --gb-styles-title-3-line-height: 28px;
+  --gb-styles-title-3-letter-spacing: 0;
+
+  --gb-styles-title-4-font-family: var(--gb-font-family-sans);
+  --gb-styles-title-4-font-size: 18px;
+  --gb-styles-title-4-font-weight: 500;
+  --gb-styles-title-4-line-height: 27px;
+  --gb-styles-title-4-letter-spacing: 0.02em;
+
+  --gb-styles-subheading-2-font-family: var(--gb-font-family-sans);
+  --gb-styles-subheading-2-font-size: 22px;
+  --gb-styles-subheading-2-font-weight: 500;
+  --gb-styles-subheading-2-line-height: 1.25;
+  --gb-styles-subheading-2-letter-spacing: 0;
+
+  --gb-styles-subheading-3-font-family: var(--gb-font-family-sans);
+  --gb-styles-subheading-3-font-size: 18px;
+  --gb-styles-subheading-3-font-weight: 500;
+  --gb-styles-subheading-3-line-height: 1.25;
+  --gb-styles-subheading-3-letter-spacing: 0.02em;
+
+  --gb-styles-subheading-4-font-family: var(--gb-font-family-sans);
+  --gb-styles-subheading-4-font-size: 16px;
+  --gb-styles-subheading-4-font-weight: 500;
+  --gb-styles-subheading-4-line-height: 1.25;
+  --gb-styles-subheading-4-letter-spacing: 0.02em;
+
+  --gb-styles-body-sm-font-family: var(--gb-font-family-sans);
+  --gb-styles-body-sm-font-size: 14px;
+  --gb-styles-body-sm-font-weight: 400;
+  --gb-styles-body-sm-line-height: 1.5;
+  --gb-styles-body-sm-letter-spacing: 0;
+
+  --gb-styles-caption-md-font-family: var(--gb-font-family-sans);
+  --gb-styles-caption-md-font-size: 16px;
+  --gb-styles-caption-md-font-weight: 500;
+  --gb-styles-caption-md-line-height: 1.25;
+  --gb-styles-caption-md-letter-spacing: 0;
+
+  --gb-semantic-body-default-md-font-family: var(--gb-font-family-sans);
+  --gb-semantic-body-default-md-font-size: 16px;
+  --gb-semantic-body-default-md-font-weight: 400;
+  --gb-semantic-body-default-md-line-height: 1.5;
+  --gb-semantic-body-default-md-letter-spacing: 0;
+
+  /* ══ Legacy Simulation flat names → core ══ */
+  --gb-navy-400: var(--gb-core-navy-400);
+  --gb-navy-500: var(--gb-core-navy-500);
+  --gb-navy-600: var(--gb-core-navy-600);
+  --gb-gray-100: var(--gb-core-gray-100);
+  --gb-gray-300: var(--gb-core-gray-300);
+  --gb-gray-900: var(--gb-core-gray-900);
+  --gb-gray-bg: var(--gb-core-gray-000);
+  --gb-yellow-700: var(--gb-core-yellow-700);
+}
