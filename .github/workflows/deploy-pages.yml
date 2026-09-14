@@ -32,9 +32,8 @@ jobs:
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
+          # Tars the whole directory, so hidden files like .nojekyll are included.
           path: _site
-          # Required so .nojekyll is not stripped by the archiver (exclude=.[^/]*).
-          include-hidden-files: true
 
   deploy:
     needs: build
