@@ -13,8 +13,8 @@
   --ink: var(--gb-core-navy-900);
   --body: #4a4436;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --display: 'Fredoka', 'DM Sans', system-ui, sans-serif;
   --sans: var(--gb-font-family-sans, 'DM Sans', system-ui, sans-serif);
+  --display: var(--sans); /* use the Forage/Gembox font, not a borrowed display face */
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -81,11 +81,9 @@ img.is-broken { visibility: hidden; }
 .nav { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: 32px;
   padding: 20px 44px; background: transparent; transition: padding .3s var(--ease), background .3s ease, box-shadow .3s ease; }
 .nav.is-stuck { padding: 12px 44px; background: var(--cream-2); box-shadow: 0 8px 26px -20px rgba(0,0,0,.6); }
-.nav__brand { display: flex; align-items: center; gap: 8px; text-decoration: none; }
-.nav__mark { color: var(--gold); font-size: 18px; transition: transform .6s var(--ease); }
-.nav__brand:hover .nav__mark { transform: rotate(180deg) scale(1.15); }
-.nav__name { font-family: var(--display); font-weight: 700; font-size: 24px; letter-spacing: -.01em; color: #fff; transition: color .3s ease; }
-.nav.is-stuck .nav__name { color: var(--navy); }
+.nav__brand { display: flex; align-items: center; text-decoration: none; }
+.nav__logo { display: block; height: 34px; width: auto; }
+.nav.is-stuck .nav__logo { height: 30px; }
 .nav__links { display: flex; gap: 30px; margin-left: auto; }
 .nav__links a { position: relative; text-decoration: none; font-weight: 600; font-size: 15px; color: rgba(255,255,255,.92); transition: color .3s ease; }
 .nav.is-stuck .nav__links a { color: var(--navy); }
@@ -189,8 +187,8 @@ img.is-broken { visibility: hidden; }
 /* ── Footer ──────────────────────────────────────────────── */
 .site-footer { background: var(--navy); color: var(--gb-core-navy-100); padding: 52px 44px;
   display: flex; flex-wrap: wrap; align-items: center; gap: 24px; }
-.site-footer__brand { display: flex; align-items: center; gap: 8px; }
-.site-footer__brand .nav__name { color: #fff; }
+.site-footer__brand { display: flex; align-items: center; }
+.site-footer__logo { display: block; height: 30px; width: auto; }
 .site-footer__links { display: flex; gap: 24px; margin-left: auto; }
 .site-footer__links a { text-decoration: none; font-size: 14px; color: var(--gb-core-navy-100); }
 .site-footer__links a:hover { color: #fff; }
