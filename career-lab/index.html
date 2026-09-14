@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Interactive career-readiness design test — Forage Marketing Pages prototype." />
+<title>Career Lab · Interactive Design Test</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../config/gembox-tokens.css" />
+<link rel="stylesheet" href="styles.css" />
+<script src="../shared/prototype-toolbar.js"></script>
+</head>
+<body>
+
+<!-- Scroll progress -->
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- Announcement bar -->
+<div class="announce">
+  <div class="announce__marquee">
+    <span>◆ Free virtual job simulations, designed by the world's top employers</span>
+    <span>◆ 9M+ learners already building real-world skills</span>
+    <span>◆ Get noticed. Get hired.</span>
+    <span>◆ Free virtual job simulations, designed by the world's top employers</span>
+    <span>◆ 9M+ learners already building real-world skills</span>
+    <span>◆ Get noticed. Get hired.</span>
+  </div>
+</div>
+
+<!-- Nav -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top">
+    <span class="nav__mark" aria-hidden="true">◆</span>
+    <span class="nav__name">forage</span>
+  </a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#who">Who we help</a>
+    <a href="#impact">Impact</a>
+    <a href="#employers">Employers</a>
+    <a href="#insights">Insights</a>
+  </nav>
+  <a class="btn btn--primary btn--sm nav__cta" href="#">Get started</a>
+  <button class="nav__menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+</header>
+
+<main id="top">
+
+  <!-- Hero: mouse spotlight + parallax + kinetic type -->
+  <section class="hero" id="hero">
+    <div class="hero__spot" id="spot" aria-hidden="true"></div>
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--1" data-depth="0.10" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--2" data-depth="0.18" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <p class="hero__eyebrow reveal">Career readiness for everyone</p>
+      <h1 class="hero__title">
+        <span class="line"><span class="word">Get</span> <span class="word">Noticed.</span></span>
+        <span class="line line--accent"><span class="word">Get</span> <span class="word">Hired.</span></span>
+      </h1>
+      <p class="hero__lede reveal">Explore careers and prepare for the job with hundreds of free job
+        simulations — a real window into the work, before you ever apply.</p>
+      <div class="hero__cta reveal">
+        <a class="btn btn--primary btn--lg" href="#">Start a simulation <span aria-hidden="true">→</span></a>
+        <a class="btn btn--ghost btn--lg" href="#impact">See the impact</a>
+      </div>
+      <div class="hero__chips reveal" aria-hidden="true">
+        <span class="chip" data-depth="0.4">Investment Banking</span>
+        <span class="chip" data-depth="0.7">Cyber Security</span>
+        <span class="chip" data-depth="0.5">Project Management</span>
+        <span class="chip" data-depth="0.9">Robotics</span>
+      </div>
+    </div>
+    <div class="hero__scrollcue" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- Intro -->
+  <section class="intro" id="who">
+    <p class="intro__eyebrow reveal">How we make a difference</p>
+    <p class="intro__lede reveal">We believe every learner deserves early, hands-on access to the world of
+      work. We're reimagining how people explore their interests, experiment with potential careers, and
+      build the <em>real-life skills</em> that top employers look for — 100% free, open access, self-paced.</p>
+  </section>
+
+  <!-- Interactive audience switcher -->
+  <section class="who2" aria-label="Who we help">
+    <div class="who2__tabs" role="tablist" aria-label="Choose your path">
+      <button class="who2__tab is-active" role="tab" aria-selected="true" data-panel="students">I'm a Student</button>
+      <button class="who2__tab" role="tab" aria-selected="false" data-panel="educators">I'm an Educator</button>
+      <button class="who2__tab" role="tab" aria-selected="false" data-panel="employers">I'm an Employer</button>
+      <button class="who2__tab" role="tab" aria-selected="false" data-panel="partners">I'm a Partner</button>
+      <span class="who2__ink" id="ink" aria-hidden="true"></span>
+    </div>
+
+    <div class="who2__stage">
+      <article class="who2__panel is-active" data-panel="students">
+        <div class="who2__copy">
+          <h2>Discover a career you can't yet see.</h2>
+          <p>Enroll in a job simulation, complete tasks that replicate real work, then compare your
+            answers to the pros. Earn a certificate and get on employers' radar.</p>
+          <a class="btn btn--primary" href="#">Explore simulations <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="who2__art who2__art--students" aria-hidden="true"><span>01</span></div>
+      </article>
+
+      <article class="who2__panel" data-panel="educators">
+        <div class="who2__copy">
+          <h2>Bring the workplace into the classroom.</h2>
+          <p>Give students authentic, self-paced experiences that map to real roles — with resources
+            that make career exploration easy to assign and easy to track.</p>
+          <a class="btn btn--primary" href="#">Resources for educators <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="who2__art who2__art--educators" aria-hidden="true"><span>02</span></div>
+      </article>
+
+      <article class="who2__panel" data-panel="employers">
+        <div class="who2__copy">
+          <h2>Go beyond the resume.</h2>
+          <p>Build a diverse, job-ready pipeline. Candidates prove their skills, grit, and drive on
+            real tasks — so you meet talent that's already done the work.</p>
+          <a class="btn btn--primary" href="#">Partner with us <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="who2__art who2__art--employers" aria-hidden="true"><span>03</span></div>
+      </article>
+
+      <article class="who2__panel" data-panel="partners">
+        <div class="who2__copy">
+          <h2>Scale opportunity together.</h2>
+          <p>We work with mission-driven organizations to expand access and spark innovation. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+          <a class="btn btn--primary" href="#">Become a partner <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="who2__art who2__art--partners" aria-hidden="true"><span>04</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Impact / odometer stats -->
+  <section class="impact" id="impact">
+    <p class="impact__eyebrow reveal">The proof</p>
+    <div class="impact__grid">
+      <div class="stat reveal">
+        <div class="odometer" data-value="9" data-suffix="M+"></div>
+        <p class="stat__label">Learners signed up to build real-world skills</p>
+      </div>
+      <div class="stat reveal">
+        <div class="odometer" data-value="3.3" data-suffix="x"></div>
+        <p class="stat__label">More likely to land a job after a simulation</p>
+      </div>
+      <div class="stat reveal">
+        <div class="odometer" data-value="250" data-suffix="+"></div>
+        <p class="stat__label">Free job simulations across industries</p>
+      </div>
+      <div class="stat reveal">
+        <div class="odometer" data-value="90" data-suffix="+"></div>
+        <p class="stat__label">Leading employers going beyond the resume</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Employer marquee -->
+  <section class="brands" id="employers">
+    <p class="brands__label reveal">Employers going beyond the resume</p>
+    <div class="brands__track">
+      <div class="brands__row" id="brandsRow">
+        <span>Northwind</span><span>Meridian</span><span>Vantage</span><span>Kestrel</span>
+        <span>Solaris</span><span>Brightwell</span><span>Copperline</span><span>Halcyon</span>
+        <span>Northwind</span><span>Meridian</span><span>Vantage</span><span>Kestrel</span>
+        <span>Solaris</span><span>Brightwell</span><span>Copperline</span><span>Halcyon</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="quote">
+    <blockquote class="quote__text reveal">"This program is like having binoculars — you get to peer
+      across and see what a real role is like, piecing together everything you've read about."</blockquote>
+    <p class="quote__cite reveal"><strong>Alex Doe</strong> · Forage Simulation User</p>
+  </section>
+
+  <!-- Insights -->
+  <section class="insights" id="insights">
+    <div class="insights__head">
+      <h2 class="section-title reveal">The&nbsp;Latest&nbsp;Insights</h2>
+      <a class="section-see reveal" href="#">See all <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="insights__grid">
+      <article class="post reveal">
+        <div class="post__thumb post__thumb--a"><span class="post__badge">Report</span></div>
+        <p class="post__kicker">Career Readiness</p>
+        <h3 class="post__title">Teens and the AI Future: Perspectives and Preparation</h3>
+      </article>
+      <article class="post reveal">
+        <div class="post__thumb post__thumb--b"><span class="post__badge">Blog</span></div>
+        <p class="post__kicker">Career Readiness</p>
+        <h3 class="post__title">How Emerging Technology Shapes Career Readiness</h3>
+      </article>
+      <article class="post reveal">
+        <div class="post__thumb post__thumb--c"><span class="post__badge">Report</span></div>
+        <p class="post__kicker">Career Readiness</p>
+        <h3 class="post__title">Curiosity into Career Direction: Looking Back, Moving Forward</h3>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="cta-band">
+    <div class="cta-band__inner reveal">
+      <h2 class="cta-band__title">A world where candidates are considered on their merits.</h2>
+      <p class="cta-band__sub">Your skills, grit, and drive — recognized and rewarded.</p>
+      <a class="btn btn--dark btn--lg" href="#">Enroll now <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__brand"><span class="nav__mark" aria-hidden="true">◆</span><span class="nav__name">forage</span></div>
+  <nav class="site-footer__links" aria-label="Footer">
+    <a href="#">Contact</a><a href="#">Cookies</a><a href="#">Legal</a><a href="#">Financials</a>
+  </nav>
+  <p class="site-footer__copy">©2026 Forage. Interactive design test — not a live page.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
