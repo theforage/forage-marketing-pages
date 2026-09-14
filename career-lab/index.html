@@ -25,7 +25,7 @@
 <!-- Nav (same wordmark treatment as the other pages) -->
 <header class="nav" id="nav">
   <a class="nav__brand" href="#top">
-    <img class="nav__logo" src="../assets/landing/forage-gembox-logo.svg" width="309" height="113" alt="Forage" decoding="async" />
+    <img class="nav__logo" src="../assets/landing/forage-logo.svg" width="309" height="113" alt="Forage" decoding="async" />
   </a>
   <nav class="nav__links" aria-label="Primary">
     <a href="#who">Section one</a>
@@ -46,8 +46,11 @@
          onerror="this.classList.add('is-broken')" />
     <div class="hero__scrim" aria-hidden="true"></div>
     <div class="hero__inner">
-      <p class="hero__eyebrow">Eyebrow placeholder</p>
-      <h1 class="hero__title">Headline goes<br />right here</h1>
+      <p class="hero__eyebrow reveal">Eyebrow placeholder</p>
+      <h1 class="hero__title">
+        <span class="l"><span>Headline goes</span></span>
+        <span class="l"><span>right here</span></span>
+      </h1>
     </div>
   </section>
 
@@ -59,6 +62,23 @@
       ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
       ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </p>
+  </section>
+
+  <!-- Employer logo ticker (real firm logos, continuously scrolling) -->
+  <section class="ticker" aria-label="Featured employers">
+    <p class="ticker__label reveal">Placeholder label text</p>
+    <div class="ticker__track">
+      <div class="ticker__row" id="tickerRow">
+        <img src="https://cdn-assets.theforage.com/firm_logos/firm-logo-ticker-logos/v2/us_ca/walmart.svg" alt="" onerror="this.remove()" />
+        <img src="https://cdn-assets.theforage.com/firm_logos/firm-logo-ticker-logos/v2/us_ca/bank-of-america.svg" alt="" onerror="this.remove()" />
+        <img src="https://cdn-assets.theforage.com/firm_logos/firm-logo-ticker-logos/v2/us_ca/mastercard.svg" alt="" onerror="this.remove()" />
+        <img src="https://cdn-assets.theforage.com/firm_logos/firm-logo-ticker-logos/v2/other/siemens.svg" alt="" onerror="this.remove()" />
+        <img src="https://cdn-assets.theforage.com/firm_logos/firm-logo-ticker-logos/v2/us_ca/bcg.svg" alt="" onerror="this.remove()" />
+        <img src="https://cdn-assets.theforage.com/firm_logos/firm-logo-ticker-logos/v2/other/kpmg.svg" alt="" onerror="this.remove()" />
+        <img src="https://cdn-assets.theforage.com/firm_logos/firm-logo-ticker-logos/v2/us_ca/ge.svg" alt="" onerror="this.remove()" />
+        <img src="https://cdn-assets.theforage.com/firm_logos/firm-logo-ticker-logos/v2/us_ca/cbre.svg" alt="" onerror="this.remove()" />
+      </div>
+    </div>
   </section>
 
   <!-- Audience cards, editorial with photos -->
@@ -193,7 +213,7 @@
 </main>
 
 <footer class="site-footer">
-  <div class="site-footer__brand"><img class="site-footer__logo" src="../assets/landing/forage-gembox-logo.svg" width="309" height="113" alt="Forage" decoding="async" /></div>
+  <div class="site-footer__brand"><img class="site-footer__logo" src="../assets/landing/forage-logo.svg" width="309" height="113" alt="Forage" decoding="async" /></div>
   <nav class="site-footer__links" aria-label="Footer">
     <a href="#">Link</a><a href="#">Link</a><a href="#">Link</a><a href="#">Link</a>
   </nav>

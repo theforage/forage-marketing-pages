@@ -79,6 +79,7 @@ a { color: inherit; }
   border-bottom: 1px solid var(--gb-ui-border);
 }
 .nav__brand { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+.nav__logo { display: block; height: 30px; width: auto; }
 .nav__mark { color: var(--gb-ui-jade-primary); font-size: 20px; }
 .nav__name { font-weight: 800; font-size: 22px; letter-spacing: -0.02em; color: var(--gb-ui-brand); }
 .nav__links { display: flex; gap: 28px; margin-left: auto; }
@@ -347,6 +348,7 @@ a { color: inherit; }
 }
 .site-footer__brand { display: flex; align-items: center; gap: 8px; }
 .site-footer__brand .nav__name { color: var(--gb-core-navy-000); }
+.site-footer__logo { display: block; height: 26px; width: auto; filter: brightness(0) invert(1); }
 .site-footer__links { display: flex; gap: 24px; margin-left: auto; }
 .site-footer__links a { text-decoration: none; font-size: 14px; color: var(--gb-core-navy-100); }
 .site-footer__links a:hover { color: var(--gb-core-navy-000); }
