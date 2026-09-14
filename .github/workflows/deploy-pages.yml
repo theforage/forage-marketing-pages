@@ -28,6 +28,7 @@ jobs:
           cp -r shared _site/shared
           cp -r assets _site/assets
           cp -r starter-page _site/starter-page
+          cp -r career-readiness _site/career-readiness
           # Disable Jekyll on Pages so README.md is never turned into the homepage.
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
